@@ -1,0 +1,56 @@
+HY28A-LCDB
+
+Description
+LCD Controller ILI9320
+Touch Screen Controller ADS7843 or XPT2046
+LCD Type TFT
+LCD Interface SPI
+Touch Screen Interface SPI
+Backlight LED
+Colors 65536
+Resolution 320*240
+Pin pitch 2.00 mm
+
+
+PIN NO SYMBOL DESCRIPTION FUNCTION
+1 5V_IN 5V power supply When powered from 5V supply,Pin 20 & Pin 21 ( 3V3_IN & 3V3_OUT ) provide 3.3V output.
+2 GND Ground Power Ground
+3 LCDB_SCK LCD SPI clock connects to SPI SCK
+4 LCDB_CS LCD chip select Low active
+5 LCDB_SDO LCD SPI data output connects to SPI MISO
+6 LCDB_SDI LCD SPI data input connects to SPI MOSI
+7 NC Not connect Not connect
+8 NC Not connect Not connect
+9 NC Not connect Not connect
+10 NC Not connect Not connect
+11 NC Not connect Not connect
+12 NC Not connect Not connect
+13 NC Not connect Not connect
+14 NC Not connect Not connect
+15 RESET Reset the controller chip Low active
+16 NC Not connect Not connect
+17 NC Not connect Not connect
+18 NC Not connect Not connect
+19 GND Ground Power Ground
+20 3V3_IN 3.3V power supply 3V3_IN = 3V3OUT, When powered from 3.3V supply, 5V_IN keep NC.
+21 3V3_OUT 3.3V power supply 3V3_IN = 3V3OUT, When powered from 3.3V supply, 5V_IN keep NC.
+22 GND Ground Power Ground
+23 NC Not connect Not connect
+24 NC Not connect Not connect
+25 NC Not connect Not connect
+26 NC Not connect Not connect
+27 NC Not connect Not connect
+28 NC Not connect Not connect
+29 NC Not connect Not connect
+30 NC Not connect Not connect
+31 NC Not connect Not connect
+32 TP_CS Touch screen chip select Low active
+33 TP_SCK Touch screen SPI clock connects to SPI SCK
+34 TP_SDI Touch screen data input connects to SPI MOSI
+35 TP_SDO Touch screen data output connects to SPI MISO
+36 TP_IRQ Touch screen interrupt Low level while the touch screen detects pressing
+37 NC Not connect Not connect
+38 NC Not connect Not connect
+39 GND Ground Power Ground
+40 BL_CTRL Backlight brightness adjustment Control the backlight brightness via PWM
+

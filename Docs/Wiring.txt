@@ -1,0 +1,29 @@
++-Raspberry-Pi-Rev2----+-HY28A-LCDB--------------+
+| GPIO | Phys | Funcs  | Pins  | Functions       |
++------+------+--------+-------+-----------------+
+|  17  |  11  | GPIO 0 |       |                 |
+|  18  |  12  | GPIO 1 |       |                 |
+|  27  |  13  | GPIO 2 |       |                 |
+|  22  |  15  | GPIO 3 |       |                 |
+|  23  |  16  | GPIO 4 |       |                 |
+|  24  |  18  | GPIO 5 | 36    | TP_IRQ          |
+|  25  |  22  | GPIO 6 | 15    | RESET           |
+|   4  |   7  | GPIO 7 |       |                 |
+|   2  |   3  | SDA    |       |                 |
+|   3  |   5  | SCL    |       |                 |
+|   8  |  24  | CE0    | 4     | LCDB_CS         |
+|   7  |  26  | CE1    | 32    | TP_CS           |
+|  10  |  19  | MOSI   | 3/34  | LCDB_SDI/TP_SDI |
+|   9  |  21  | MISO   | 5/35  | LCDB_SDO/TP_SDO |
+|  11  |  23  | SCLK   | 3/32  | LCDB_SCK/TP_SCK |
+|  14  |   8  | TxD    |       |                 |
+|  15  |  10  | RxD    |       |                 |
+|  28  |   3  | GPIO 8 |       |                 |
+|  29  |   4  | GPIO 9 |       |                 |
+|  30  |   5  | GPIO10 |       |                 |
+|  31  |   6  | GPIO11 |       |                 |
+|      |   1  | 3V3PWR | 20    | 3V3_IN (35mA)   |
+|      |  25  | GND    | 2     | GND             |
++------+------+--------+-------+-----------------+
+
+N.B.: PWM not yet connected
