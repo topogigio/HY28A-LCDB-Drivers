@@ -5,19 +5,26 @@ Drivers for LCD HY28A-LCDB with these hardware:
  - DS7843 for Touch Panel
 
 Pre-requisite
+
 Hardware:
  - Raspberry Pi Type B 512Mb Ver2
  - 2.8" inch 320x240 Touch TFT LCD Display Module, SPI Interface, ILI9320, HY28A-LCDB http://www.ebay.it/itm/181008290930
+
 Wiring Diagram:
  - See files Wiring.txt
+
 Linux Distro:
  - Wheezy image: 2013-02-09-wheezy-raspbian.img on SD 4/8Gb
+
 Compiler:
  - gcc version 4.6.3 (Debian 4.6.3-14+rpi1)
+
 Libraries:
  - BCM2835 Library Download from: http://www.airspayce.com/mikem/bcm2835/
+
 Compile:
  - gcc -o spi -lrt main.c -lbcm2835 -lm -mfloat-abi=hard -Wall
+
 Execute:
  - sudo ./spi
 
