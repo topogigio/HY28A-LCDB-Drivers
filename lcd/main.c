@@ -7,6 +7,10 @@
   Return : None
   Compile/link : gcc -o spi -lrt main.c -lbcm2835 -lm* gcc -o spi -lrt main.c -lbcm2835 -lm -mfloat-abi=hard -Wall
   Execute : sudo ./spi
+
+  Author Github: https://github.com/topogigio
+  Updated By : mrmwogli / https://github.com/mrmowgli/HY28A-LCDB-Drivers
+
 *******************************************************************************/
 
 
