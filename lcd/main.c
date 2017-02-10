@@ -212,7 +212,10 @@ long getImageInfo(FILE* inputFile, long offset, int numberOfChars){
 /********************************************************************************
   Function Name : LCD_PutImage
   Description : Show BMP
-  Input : x upper left corner image start* y upper left corner image start* file filename full qualified path
+  Input : 
+    x : upper left corner image start
+    y : upper left corner image start
+    file:  filename full qualified path
   Output : None
   Return : None
   Attention : The image must be 24 bits RGB (sub will convert to 16 bits)
@@ -302,7 +305,8 @@ void LCD_Reset(){
 /********************************************************************************
   Function Name : LCD_Init
   Description : Initialize TFT Controller.
-  Input : ori 0=landscape 3=portrait clockwise 1 & 2 not yet implemented
+  Input : 
+    ori : 0=landscape 3=portrait clockwise 1 & 2 not yet implemented
   Output : None
   Return : None
   Attention : None
@@ -385,7 +389,9 @@ void LCD_Init(unsigned char ori){
 /********************************************************************************
   Function Name : LCD_WriteReg
   Description : Writes to the selected LCD register.
-  Input : - LCD_Reg: address of the selected register.* - LCD_RegValue: value to write to the selected register.
+  Input : 
+    LCD_Reg: address of the selected register.
+    LCD_RegValue: value to write to the selected register.
   Output : None
   Return : None
   Attention : None
@@ -399,7 +405,8 @@ void LCD_WriteReg( unsigned short LCD_Reg, unsigned short LCD_RegValue){
 /********************************************************************************
   Function Name : LCD_WriteIndex
   Description : LCD write register address
-  Input : - index: register address
+  Input : 
+    index: register address
   Output : None
   Return : None
   Attention : None
@@ -414,7 +421,8 @@ void LCD_WriteIndex(unsigned char index){
 /********************************************************************************
   Function Name : LCD_WriteData
   Description : LCD write register data
-  Input : - data: register data
+  Input : 
+    data: register data
   Output : None
   Return : None
   Attention : None
@@ -425,9 +433,12 @@ void LCD_WriteData(unsigned short data){
   //uncomment for debug //printf("SPI: WriteData: %02X %02X %02X \n", buf[0], buf[1], buf[2]);
 }
 
-/******************************************************************************* Function Name : LCD_SetPoint
+/******************************************************************************* 
+  Function Name : LCD_SetPoint
   Description : Drawn at a specified point coordinates
-  Input : - Xpos: Row Coordinate* - Ypos: Line Coordinate
+  Input : 
+    Xpos: Row Coordinate
+    Ypos: Line Coordinate
   Output : None
   Return : None
   Attention : None
@@ -472,7 +483,9 @@ unsigned short LCD_ReadData(void){
 /********************************************************************************
   Function Name : LCD_SetCursor
   Description : Sets the cursor position.
-  Input : - Xpos: specifies the X position.* - Ypos: specifies the Y position.
+  Input : 
+    Xpos: specifies the X position.
+    Ypos: specifies the Y position.
   Output : None
   Return : None
   Attention : None
@@ -486,7 +499,8 @@ static void LCD_SetCursor(unsigned short Xpos, unsigned short Ypos ){
 /********************************************************************************
   Function Name : DelayMicrosecondsNoSleep
   Description : Delay n microseconds
-  Input : delay_us: specifies the n microseconds
+  Input : 
+    delay_us: specifies the n microseconds
   Output : None
   Return : None
   Attention : None
@@ -510,8 +524,10 @@ void DelayMicrosecondsNoSleep (int delay_us){
 /********************************************************************************
   Function Name : GetASCIICode
   Description : get ASCII code data
-  Input : - ASCII: Input ASCII code
-  Output : - *pBuffer: Store data pointer
+  Input : 
+    ASCII: Input ASCII code
+  Output : 
+    *pBuffer: Store data pointer
   Return : None
   Attention : None
 *******************************************************************************/
@@ -522,7 +538,8 @@ void GetASCIICode(unsigned char* pBuffer,unsigned char ASCII){
 /********************************************************************************
   Function Name : LCD_Clear
   Description : Fill the screen with the specified color
-  Input : - Color: Screen Color
+  Input : 
+    Color: Screen Color
   Output : None
   Return : None
   Attention : None
@@ -535,9 +552,11 @@ void LCD_Clear(unsigned short Color){
   }
 }
 
-/******************************************************************************* Function Name : LCD_BGR2RGB
+/******************************************************************************* 
+  Function Name : LCD_BGR2RGB
   Description : RRRRRGGGGGGBBBBB To BBBBBGGGGGGRRRRR
-  Input : - color: BRG Color value
+  Input :
+    color: BRG Color value
   Output : None
   Return : RGB Color value
   Attention : None
@@ -551,9 +570,12 @@ static unsigned short LCD_BGR2RGB(unsigned short color){
   return( rgb );
 }
 
-/******************************************************************************* Function Name : LCD_GetPoint
+/******************************************************************************* 
+  Function Name : LCD_GetPoint
   Description : Get color value for the specified coordinates
-  Input : - Xpos: Row Coordinate* - Xpos: Line Coordinate
+  Input :
+    Xpos: Row Coordinate
+    Xpos: Line Coordinate
   Output : None
   Return : Screen Color
   Attention : None
@@ -567,7 +589,8 @@ unsigned short LCD_GetPoint(unsigned short Xpos, unsigned short Ypos){
   return LCD_BGR2RGB(dummy);
 }
 
-/******************************************************************************* Function Name : PutChar
+/******************************************************************************* 
+  Function Name : PutChar
   Description : Lcd screen displays a character
   Input : - 
     Xpos: Horizontal coordinate
@@ -611,11 +634,12 @@ void PutChar(unsigned short Xpos, unsigned short Ypos, unsigned char ASCI, unsig
 /******************************************************************************* 
   Function Name : LCD_Text
   Description : Displays the string
-  Input : - Xpos: Horizontal coordinate 
-  Ypos: Vertical coordinate 
-  str: Displayed string
-  charColor: Character color
-  bkColor: Background color
+  Input : 
+    Xpos: Horizontal coordinate 
+    Ypos: Vertical coordinate 
+    str: Displayed string
+    charColor: Character color
+    bkColor: Background color
   Output : None
   Return : None
   Attention : None
@@ -635,9 +659,11 @@ void LCD_Text(unsigned short Xpos, unsigned short Ypos, char *str, unsigned shor
   } while ( *str != 0 );
 }
 
-/******************************************************************************* Function Name : sgn
+/******************************************************************************* 
+  Function Name : sgn
   Description : return the sign of number
-  Input : - nu: the number
+  Input : 
+    nu: the number
   Output : None
   Return : 1 if > 0; -1 if < 0; 0 of = 0
   Attention : None
@@ -649,9 +675,15 @@ int sgn(int nu){
   return 0;
 }
 
-/******************************************************************************* Function Name : LCD_DrawLine
+/******************************************************************************* 
+  Function Name : LCD_DrawLine
   Description : Bresenham's line algorithm
-  Input : - x1: A point line coordinates* - y1: A point column coordinates* - x2: B point line coordinates* - y2: B point column coordinates* - col: Line color
+  Input : 
+    x1: A point line coordinates
+    y1: A point column coordinates
+    x2: B point line coordinates
+    y2: B point column coordinates
+    col: Line color
   Output : None
   Return : None
   Attention : None
@@ -693,9 +725,15 @@ void LCD_DrawLine(unsigned short x1, unsigned short y1, unsigned short x2, unsig
   }
 }
 
-/******************************************************************************* Function Name : LCD_DrawBox
+/******************************************************************************* 
+  Function Name : LCD_DrawBox
   Description : Multiple line makes box
-  Input : - x1: A point line coordinates upper left corner* - y1: A point column coordinates* - x2: B point line coordinates lower right corner* - y2: B point column coordinates* - col: Line color
+  Input : 
+    x1: A point line coordinates upper left corner
+    y1: A point column coordinates
+    x2: B point line coordinates lower right corner
+    y2: B point column coordinates
+    col: Line color
   Output : None
   Return : None
 ******************************************************************************/
@@ -715,7 +753,8 @@ void LCD_DrawBox(unsigned short x0, unsigned short y0, unsigned short x1, unsign
   }
 }
 
-/******************************************************************************* Function Name : drawCircle
+/******************************************************************************* 
+  Function Name : drawCircle
   Description : Sub for LCD_DrawCircle
   Input :  
     xc: 
@@ -737,7 +776,8 @@ void drawCircle(unsigned short xc, unsigned short yc, unsigned short x, unsigned
   LCD_SetPoint(xc-y, yc-x, col);
 }
 
-/******************************************************************************* Function Name : LCD_DrawCircle
+/******************************************************************************* 
+  Function Name : LCD_DrawCircle
   Description : Draw a circle
   Input : 
     xc: A point line coordinates center
@@ -763,9 +803,15 @@ void LCD_DrawCircle(unsigned short xc, unsigned short yc, unsigned short r, unsi
   }
 }
 
-/******************************************************************************* Function Name : LCD_DrawCircleFill
+/******************************************************************************* 
+  Function Name : LCD_DrawCircleFill
   Description : Draw a circle filled
-  Input : - xc: A point line coordinates center* - yc: A point column coordinates center* - r: radius of circle* - bcol: border color* - col: fill color
+  Input : 
+    xc: A point line coordinates center
+    yc: A point column coordinates center
+    r: radius of circle
+    bcol: border color
+    col: fill color
   Output : None
   Return : None
 ******************************************************************************/
@@ -836,7 +882,8 @@ void LCD_DisplayOff(void){
   LCD_WriteReg(0x07, 0x0000);
 }
 
-/******************************************************************************* Function Name : Read_X
+/******************************************************************************* 
+  Function Name : Read_X
   Description : Read display X position of touch panel
   Input : None
   Output : None
@@ -924,7 +971,9 @@ void TP_DrawPoint(unsigned short Xpos,unsigned short Ypos){
 /********************************************************************************
   Function Name : DrawCross
   Description : specified coordinates painting crosshairs
-  Input : - Xpos: Row Coordinate* - Ypos: Line Coordinate 
+  Input :
+    Xpos: Row Coordinate
+    Ypos: Line Coordinate 
   Output : None
   Return : None
   Attention : None
