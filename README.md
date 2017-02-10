@@ -1,11 +1,14 @@
-# HY28A-LCDB Drivers 
-### For Raspberry Pi2b
+# HY28A-LCDB Drivers  For Raspberry Pi2b / Raspbian Wheezy
 
 Drivers for LCD HY28A-LCDB with these hardware: 
  - ILI9320 for LCD 
  - DS7843 for Touch Panel
 
-# Pre-requisite
+** NOTE: **
+This isn't an actual driver, and will not load as a module.  It DOES allow basic
+communication with the screen through SPI.
+
+# Pre-requisite:
 
 **Hardware:**
  - Raspberry Pi Type B 512Mb Ver2
